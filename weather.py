@@ -107,13 +107,11 @@ def dec2bin(dec):
 		bin[4] = 1
 	return bin
 
-#piglow = PiGlow()
-# while True:
-# 	jdata = getJDataFromURL(url)
-# 	temperature = getTemp(jdata)
-# 	print temperature
-# 	colors = getColor(temperature)
-# 	soft_blink(piglow,blink_duration,brightness,colors2leds(colors))
-# 	sleep(period)
-
-print dec2bin(12)
+piglow = PiGlow()
+while True:
+ 	jdata = getJDataFromURL(url)
+ 	temperature = getTemp(jdata)
+ 	print temperature
+ 	colors = getColor(temperature)
+ 	soft_blink(piglow,blink_duration,brightness,colors2leds(colors))
+ 	sleep(period)
